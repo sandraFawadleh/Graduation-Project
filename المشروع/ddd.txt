@@ -1,0 +1,12 @@
+CREATE TABLE Member (
+    id int PRIMARY KEY,
+    pa varchar(30),
+    age int not null ,
+    gender varchar(10),
+    passwd varchar(25),
+    dailycaloriemeal int,
+    currentWEIGHT double,
+    username varchar(30),
+    eid int, FOREIGN KEY(eid) REFERENCES exercise(id),
+    fid int, FOREIGN KEY(fid) REFERENCES fooditem(id)
+);
